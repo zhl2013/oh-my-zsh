@@ -10,11 +10,11 @@ mytest(){
 
 cc=""
 function listMytestComplections {
-   echo "$cc "
-   if [ -n $cc ];then
-        cc="`date` 123"
-        echo "`date`"
-   fi
+   #echo "$cc "
+   #if [ -n $cc ];then
+   #     cc="`date` 123"
+   #     echo "`date`"
+   #fi
    reply=(
         abc abc:zhl abc
         test test:zhl testCompectrl
