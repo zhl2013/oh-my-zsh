@@ -1,0 +1,3 @@
+groupName,host,port,user,pwd,keyfile,compectl,date
+gaiay-test,192.168.0.221,22,jumpserver,q1w2e3,,wallet sa sf,2017-08-17 17:58:37
+gaiay-test,192.168.0.227,22,jumpserver,q1w2e3,,mysql redis,2017-08-17 17:58:25
