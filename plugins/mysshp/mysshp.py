@@ -5,7 +5,8 @@ import os,sys,re
 
 import csv
 
-sshHosts = sys.path[0] + "/sshp.csv"
+#sshHosts = sys.path[0] +  "/sshp.csv"
+sshHosts = os.environ['HOME'] +  "/.ssh/sshp.csv"
 script = sys.path[0] + "/login.sh"
 script_nest = sys.path[0] + "/login_nest.sh"
 
@@ -13,6 +14,7 @@ spliteChar = ":"
 
 def _readSshpConfig():
     hosts=[]
+    #sshHosts2 = os.environ['HOME'] + sshHosts
     if(os.path.exists(sshHosts) == False):
         print sshHosts + " is no exist"
         return hosts
@@ -30,6 +32,8 @@ def _getCompectrlDict(hosts):
     if(len(hosts)>0):
         for host in hosts:
             groupName = host["groupName"]
+            if(groupName.startswith("#")==True):
+                continue
             user = host["user"]
             if groupName not in result:
                 result[groupName]=host
