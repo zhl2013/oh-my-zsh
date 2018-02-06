@@ -4,6 +4,7 @@
 import os,sys,re
 
 import csv
+import shutil
 
 #sshHosts = sys.path[0] +  "/sshp.csv"
 sshHosts = os.environ['HOME'] +  "/.ssh/sshp.csv"
@@ -14,10 +15,11 @@ spliteChar = ":"
 
 def _readSshpConfig():
     hosts=[]
-    #sshHosts2 = os.environ['HOME'] + sshHosts
     if(os.path.exists(sshHosts) == False):
-        print sshHosts + " is no exist"
-        return hosts
+        #print sshHosts + " is no exist"
+        oldname=sys.path[0] +  "/sshp.csv"
+        shutil.copyfile(oldname,sshHosts)
+        #return hosts
 
     with open(sshHosts, 'rb') as f:        # 采用b的方式处理可以省去很多问题
         reader = csv.DictReader(f)
