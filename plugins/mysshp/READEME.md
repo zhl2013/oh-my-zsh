@@ -17,6 +17,7 @@ mac 远程工具有 SecureCRT  与 zoc7 ，收费且经常崩溃，借住os-my-z
 
 1. 提示先groupName,keyword,user，依次提示不是全提示出来
 2. 登陆信息维护，crud
+3. csv 文件加密
 
 sshp.csv 放到~/.ssh/ 目录下
 
