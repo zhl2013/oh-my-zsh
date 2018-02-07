@@ -19,6 +19,7 @@ mac 远程工具有 SecureCRT  与 zoc7 ，收费且经常崩溃，借住os-my-z
 2. 登陆信息维护，crud
 3. csv 文件加密
 
+
 sshp.csv 放到~/.ssh/ 目录下
 
 | groupName | host | port |  user  | pwd  | keyfile  |compectrl | date |
